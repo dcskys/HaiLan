@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+//表示 com.android.application 是一个应用程序模块 com.android.library表明是一个库模块
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.dc.hailan"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            //混淆   前面是android sdk目录下 通用     后面 在当前目录 的根目录下
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+/*
+*
+* */
+
+dependencies {
+    //包含 本地依赖 库依赖  远程依赖
+    //本地依赖
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    testCompile 'junit:junit:4.12'
+    //远程 依赖
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+
+    compile files('libs/fastjson.jar')
+    //OkGo网络
+    compile 'com.lzy.net:okgo:+'
+
+    //GreenDao3.0
+    compile 'org.greenrobot:greendao:3.1.0'
+    //Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile  'com.android.support:support-v4:23.3.0'
+
+    //butterknife
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //eventbus:3.0
+    compile 'org.greenrobot:eventbus:3.0.0'
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.1.0'
+    }
+}
+
+apply plugin: 'org.greenrobot.greendao'
+/* /* //设置DaoMaster 、DaoSession、Dao包名
+    daoPackage 'com.db.greendao.gen'
+
+    targetGenDir 'src/main/java'*/
+
+greendao {
+    schemaVersion 1
+}
+
+
+
+
+

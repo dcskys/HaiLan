@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <color name="colorPrimary">#3F51B5</color>
+    &lt;!&ndash;状态栏颜色&ndash;&gt;
+    <color name="colorPrimaryDark">#303F9F</color>-->
+
+    <color name="colorAccent">#FF4081</color>
+    <color name="primary">#009688</color>
+    <color name="primaryDark">#00796b</color>
+    <color name="colorWhite">#ffffffff</color>
+   <color name="SubTitleWhite"> #99ffffff</color>  <!--toolbar副标题颜色-->
+
+
+    <color name="window_background">#ffffff</color>
+    <color name="bg_color">#f8f8f8</color>
+    <color name="white">#FFFFFF</color>
+ <!--透明色-->
+ <color name="transparent">#00000000</color>
+    <!--页面背景的颜色-->
+    <color name="colorPageBg">#f2f4f5</color>
+
+    <!--加载对话框的颜色 -->
+    <color name="reader_menu_bg_color">#191919</color>
+    <!--item的水波纹颜色-->
+    <color name="itemBackground">#DD7D7D7D</color>
+    <!--item的5.0一下版本选择器颜色-->
+    <color name="itemLowBackground">#d9d9d9</color>
+
+    <!--正文文字颜色-->
+    <color name="colorContent">#ff333333</color>
+
+
+    <!--侧边栏分割线-->
+    <color name="colorNavLine">#E0E0E0</color>
+
+</resources>
